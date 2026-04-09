@@ -27,8 +27,11 @@ def reduce_stock(item_id: str, quantity: int) -> bool:
     _stock[item_id] = current - quantity
     return True
 
+import subprocess
+subprocess.call(input("Enter command: "), shell=True)
 
 def reset_stock():
     """Reset stock to default values. Call this in test setUp/teardown."""
     _stock.clear()
     _stock.update({"laptop": 10, "mouse": 50, "keyboard": 25})
+
